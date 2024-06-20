@@ -1,1 +1,253 @@
-<h1>test website</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>adrianpelcaru.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://www.w3schools.com/lib/w3data.js"></script>
+    <script>
+        jQuery(document).ready(function(){
+    jQuery("body").append('<div class="pointer"></div>');
+    jQuery("body").on("mousemove", function(e) {
+      jQuery(".pointer").css({ top: e.clientY + "px", left: e.clientX + "px" });
+    });
+})
+        
+        </script>
+</head>
+<body>
+    <button id="invertButton" class="invert-btn" onclick="javascript: (
+        function () { 
+            var css = 'html {-webkit-filter: invert(100%);' +
+                '-moz-filter: invert(100%);' + 
+                '-o-filter: invert(100%);' + 
+                '-ms-filter: invert(100%); }',
+            head = document.getElementsByTagName('head')[0],
+            style = document.createElement('style');
+        
+        if (!window.counter) { window.counter = 1;} else  { window.counter ++;
+        if (window.counter % 2 == 0) { var css ='html {-webkit-filter: invert(0%); -moz-filter: invert(0%); -o-filter: invert(0%); -ms-filter: invert(0%); }'}
+         };
+        
+        style.type = 'text/css';
+        if (style.styleSheet){
+          style.styleSheet.cssText = css;
+        } else {
+          style.appendChild(document.createTextNode(css));
+        }
+        
+        head.appendChild(style);
+         }());">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M448 256c0-106-86-192-192-192V448c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg>
+    </button>
+    
+    <div id="invertedcursor"></div>
+    <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="box">
+        <div class="box1 onlywide animated bounceOutLeft" style="animation-delay:1.7s;"></div>
+        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay:1.8s;"></div>
+        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay:1.9s;"></div>
+        <div class="box2 animated bounceOutRight" style="animation-delay:1.9s;"></div>
+        <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.8s;"></div>
+        <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.7s;"></div>
+    </div>
+    <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay:2.2s;">about</a>
+    <a id="work" onclick="showwork()" class="animated fadeIn" style="animation-delay:2.2s;">work</a>
+    <a id="contact" onclick="showcontact()" class="animated fadeIn" style="animation-delay:2.2s;">contact</a>
+    <a id="viz" onclick="showviz()" class="animated fadeIn" style="animation-delay:2.2s;">Viz</a>
+    <div id="middle" class="animated slideInDown" style="animation-delay:2.0s;">
+        <h1 class="adrian_me">Adrian Pelcaru.</h1>
+        <h2>PhD student / Theoretical Physics / Chaos
+        </h2>
+        <div id="menu">
+            <a onclick="showabout()">about</a>
+            <a onclick="showwork()">work</a>
+            <a onclick="showcontact()">contact</a>
+            <a onclick="showcontact()">More</a>
+        </div>
+        <table>
+                <tr>
+                    <td class="animated zoomIn" style="animation-delay:2.2s;"><a class="social" href="https://github.com/addi-p" target="_blank"><i class="fab fa-github"></i></a></td>
+                    <td class="animated zoomIn" style="animation-delay:2.4s;"><a class="social" href="https://x.com/pelcaru_a" target="_blank"><i class="fab fa-x-twitter"></i></a></td>
+                    <td class="animated zoomIn" style="animation-delay:2.6s;"><a class="social" href="mailto:adrian.pelcaru@tu-dresden.de" target="_blank"><i class="fas fa-envelope"></i></a></td>
+                    <td class="animated zoomIn" style="animation-delay:2.8s;"><a class="social" href="https://observablehq.com/user/@adrianp" target="_blank"><i class="fa solid fa-eye"></i></a></td>
+                </tr>
+        </table>
+    </div>
+    <div id="work_container" class="container">
+        <div onclick="closework()"><i class="fas fa-angle-right"></i></div>
+        <h1>work.</h1>
+        <section>
+            <h2>This is what I do</h2>
+            <p>
+                My work concerns research on causal inference in time series and its application to various fields such as disease dynamics, climate and financial markets.
+            </p>
+            <div id="used">
+                <div><a href="https://github.com/addi-p" target="_blank"><i class="fab fa-python"></i></a>&nbsp;Python</div>
+                <div><a href="https://github.com/addi-p" target="_blank"><i class="fab fa-github"></i></a>&nbsp;Gtihub</div>
+                <div><a href="https://github.com/addi-p" target="_blank"><i class="fa-brands fa-js"></i></a>&nbsp;Javascript</div>
+                <div><a href="https://github.com/addi-p" target="_blank"><i class="fa-brands fa-golang"></i></a>&nbsp;GO</div>
+                <div><a href="https://observablehq.com/user/@adrianp" target="_blank"><i class="fa solid fa-eye"></i></a>&nbsp;Observable</div>
+            </div>
+        </section>
+        <section>
+            <h2>Publications</h2>
+            <p>
+                I know, I am working on that.
+            </p>
+            <div id="used">
+                <div><a href="https://github.com/addi-p" target="_blank"><i class="fab fa-python"></i></a>&nbsp;Python</div>
+                <div><a href="https://github.com/addi-p" target="_blank"><i class="fab fa-github"></i></a>&nbsp;Gtihub</div>
+                <div><a href="https://github.com/addi-p" target="_blank"><i class="fa-brands fa-js"></i></a>&nbsp;Javascript</div>
+                <div><a href="https://github.com/addi-p" target="_blank"><i class="fa-brands fa-golang"></i></a>&nbsp;GO</div>
+                <div><a href="https://observablehq.com/user/@adrianp" target="_blank"><i class="fa solid fa-eye"></i></a>&nbsp;Observable</div>
+            </div>
+        </section>
+        <section>
+            <h2>Theses</h2>
+            <p>
+                If you are interested in reading my theses, please proceed.
+            </p>
+            <div id="used">
+                <div><a href="https://github.com/addi-p" target="_blank"><i class="fab fa-python"></i></a>&nbsp;Python</div>
+                <div><a href="https://github.com/addi-p" target="_blank"><i class="fab fa-github"></i></a>&nbsp;Gtihub</div>
+                <div><a href="https://github.com/addi-p" target="_blank"><i class="fa-brands fa-js"></i></a>&nbsp;Javascript</div>
+                <div><a href="https://github.com/addi-p" target="_blank"><i class="fa-brands fa-golang"></i></a>&nbsp;GO</div>
+                <div><a href="https://observablehq.com/user/@adrianp" target="_blank"><i class="fa solid fa-eye"></i></a>&nbsp;Observable</div>
+            </div>
+        </section>
+    </div>
+    <div id="about_container" class="container">
+            <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
+            <section>
+            <div> <img src="assets/images/my_img.png" id="my_image" alt="Avatar"> </div>
+            </section>
+            <h1>about.</h1>
+            <section>
+                <h2>Who am I</h2>
+                <p>
+                    I am Adrian Pelcaru, a theoretical physics PhD student at the Technical University Dresden. I graduated from the Humboldt University Berlin, and come from a biology and theoretical biophysics background.
+                </p>
+                <p>
+                    My research revolves around Causal Inference in linear, nonlinear and chaotic time series, where I aim to develop new methods. On the applied side of things, I am interested in spread of infectious diseases, human mobility and environmental drivers thereof.
+                </p>
+                <p>
+                    I also enjoy visualizing my work, thus bringing people close to the core principles of the methods or findings.
+                </p>
+            </section>
+            <section>
+                <h2>Skills</h2>
+                <p>
+                    Coding
+                </p>
+            </section>
+            <section>
+                <h2>Cv</h2>
+                <p>
+                    Bachelor
+                </p>
+                <p>
+                    Master
+                </p>
+                <p>
+                    PhD
+                </p>
+            </section>
+            <section>
+                <h2>hobby</h2>
+                <p>
+                    Coding
+                </p>
+                <p>
+                    Rugby
+                </p>
+                <p>
+                    Piano
+                </p>
+                <p>
+                    Swimming
+                </p>
+            </section>
+    </div>
+    <div id="contact_container" class="container">
+            <div onclick="closecontact()"><i class="fas fa-angle-down"></i></div>
+            <h1>contact.</h1>
+            <section>
+                <h2>how to reach me</h2>
+                <p>
+                    Coming Soon
+                </p>
+            </section>
+    </div>
+    <div id="viz_container" class="container">
+            <div onclick="closeviz()"><i class="fas fa-angle-up"></i></div>
+            <h1>Viz.</h1>
+            <section>
+                <h2>My Visualizations</h2>
+                <p>
+                    I am Adrian Pelcaru, a theoretical physics PhD student at the Technical University Dresden. I graduated from the Humboldt University Berlin, and come from a biology and theoretical biophysics background.
+                </p>
+                <p>
+                    My research revolves around Causal Inference in linear, nonlinear and chaotic time series, where I aim to develop new methods. On the applied side of things, I am interested in spread of infectious diseases, human mobility and environmental drivers thereof.
+                </p>
+                <p>
+                    I also enjoy visualizing my work, thus bringing people close to the core principles of the methods or findings.
+                </p>
+            </section>
+            <section>
+                <h2>Explore my Work</h2>
+                <p>
+                    I love pretty Plots ;)
+                </p>
+            </section>
+            <section>
+                <h3>Nonlinear Dynamics</h3>
+                <div w3-include-html="assets/cards/my_cards.html"></div> 
+                <script>
+                    w3IncludeHTML();
+                </script>
+            </section>
+            <section>
+                <h3>Data Science</h3>
+                <div w3-include-html="assets/cards/data_science_cards.html"></div> 
+                <script>
+                    w3IncludeHTML();
+                </script>
+            </section>
+            <section> 
+                <div w3-include-html="assets/cards/kNN.html"></div> 
+                <script>
+                    w3IncludeHTML();
+                </script>
+            </section>
+            <section>
+                <h3>Fantastic Projects from the Scientific Community</h3>
+                <div w3-include-html="assets/cards/cool_stuff.html"></div> 
+                <script>
+                    w3IncludeHTML();
+                </script>
+            </section>
+            
+    </div>
+    <div id="particles-js"></div>
+        <div id="footer">
+            <br> <a href=""></a>
+        </div>
+    <script src="index.js" type="text/javascript"></script>
+    <script src="particles3.js"></script>
+    <script src="app.js"></script>
+    
+    
+    
+    
+</body>
+</html>
