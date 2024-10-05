@@ -3,7 +3,7 @@
 title: Adrian Pelcaru
 
 # Name pronunciation (optional)
-name_pronunciation: Adrian Pelcaru
+#name_pronunciation: Adrian Pelcaru
 
 # Full name (for SEO)
 first_name: Adrian
@@ -13,6 +13,9 @@ last_name: Pelcaru
 status:
   icon: 
 
+image:
+    # Add your image background to `assets/media/`.
+    filename: featured.png
 # Is this the primary user of the site?
 superuser: true
 
@@ -40,8 +43,8 @@ profiles:
   - icon: brands/x
     url: https://twitter.com/pelcaru_a
   - icon: brands/github
-    url: https://github.com/gcushen
-  - icon: brands/observableshq
+    url: https://github.com/addi-p
+  - icon: eye
     url: https://observablehq.com/user/@adrianp
 
 interests:
