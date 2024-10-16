@@ -9,15 +9,10 @@ design:
 # Note: `username` refers to the user's folder name in `content/authors/`
 
 ## Page sections
-#sections:
-#  - block: resume-experience
-#    content:
-#      username: admin
-#    design:
-#      # Hugo date format
-#      date_format: 'January 2006'
-#      # Education or Experience section first?
-#      is_education_first: false
+output:
+  #tufte::tufte_handout: default
+  tufte::tufte_html: default
+
 #  - block: resume-skills
 #    content:
 #      title: Skills & Hobbies
@@ -33,3 +28,5 @@ design:
 #      title: Languages
 #      username: admin
 ---
+
+Hello Hello Hello

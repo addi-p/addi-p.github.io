@@ -25,9 +25,9 @@ sections:
         color: 
         image:
           # Add your image background to `assets/media/`.
-          filename: joy_vacc.png
+          filename: banner.png #joy_vacc.png
           filters:
-            brightness: 5.1
+            brightness: .91
           size: cover
           position: center
           parallax: false
